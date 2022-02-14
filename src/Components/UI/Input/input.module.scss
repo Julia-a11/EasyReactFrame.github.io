@@ -9,5 +9,14 @@
     margin-bottom: 16px;
     font-family: Roboto, serif;
     outline: none;
+
+    @media screen and(max-width: 1200px) {
+      width: 310px;
+    }
+
+    @media screen and(max-width: 376px) {
+      width: 250px;
+      height: 40px;
+    }
   }
 }

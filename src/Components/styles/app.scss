@@ -68,6 +68,10 @@ select {
   font: inherit;
 }
 
+/* Переменные */
+$fontRoboto: Roboto, serif;
+$blackColor: #000000;
+
 .header {
   width: 100%;
   background: #090808;
@@ -83,19 +87,6 @@ select {
   }
 }
 
-.footer {
-  background: #737373;
-  width: 100%;
-  height: 160px;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-
-  &__img {
-    margin-left: 32px;
-  }
-}
-
 .app {
   display: flex;
   justify-content: space-around;
@@ -105,18 +96,43 @@ select {
     display: flex;
     flex-direction: column;
   }
+
+  @media screen and (max-width: 768px) {
+    min-height: calc(100vh - 100px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .form {
-  border: 1px solid #000000;
+  border: 1px solid $blackColor;
   padding: 32px 16px;
   margin-top: 200px;
   height: 278px;
+  width: 400px;
 
   label {
     font-size: 16px;
-    color: #000000;
-    font-family: Roboto, serif;
+    color: $blackColor;
+    font-family: $fontRoboto;
+
+    @media screen and(max-width:991px) {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and(max-width: 1200px) {
+    width: 350px;
+  }
+
+  @media screen and(max-width: 768px) {
+    margin: 30px 0;
+  }
+
+  @media screen and(max-width: 376px) {
+    width: 290px;
+    height: 268px;
   }
 }
 
@@ -126,18 +142,55 @@ select {
     margin-top: 80px;
 
     h1 {
-      font-family: Roboto, serif;
+      font-family: $fontRoboto;
       font-weight: bold;
       font-size: 72px;
-      color: #000000;
+      color: $blackColor;
+
+      @media screen and(max-width:1200px) {
+        font-size: 62px;
+      }
+
+      @media screen and(max-width:1024px) {
+        font-size: 52px;
+      }
+
+      @media screen and(max-width:991px) {
+        font-size: 48px;
+      }
+
+      @media screen and(max-width:376px) {
+        font-size: 38px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 10px;
+      text-align: center;
     }
   }
 
   &__text {
     p {
-      font-family: Roboto, serif;
+      font-family: $fontRoboto;
       font-size: 32px;
-      color: #000000;
+      color: $blackColor;
+
+      @media screen and(max-width:1200px) {
+        font-size: 28px;
+      }
+
+      @media screen and(max-width:1024px) {
+        font-size: 24px;
+      }
+
+      @media screen and(max-width:991px) {
+        font-size: 18px;
+      }
+
+      @media screen and(max-width:376px) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -150,8 +203,24 @@ select {
   &__list {
     p {
       font-size: 32px;
-      font-family: Roboto, serif;
-      color: #000000;
+      font-family: $fontRoboto;
+      color: $blackColor;
+
+      @media screen and(max-width:1200px) {
+        font-size: 28px;
+      }
+
+      @media screen and(max-width:1024px) {
+        font-size: 24px;
+      }
+
+      @media screen and(max-width:991px) {
+        font-size: 18px;
+      }
+
+      @media screen and(max-width:376px) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -162,8 +231,50 @@ select {
   &__text {
     p {
       font-size: 32px;
-      font-family: Roboto, serif;
-      color: #000000;
+      font-family: $fontRoboto;
+      color: $blackColor;
+
+      @media screen and(max-width:1200px) {
+        font-size: 28px;
+      }
+
+      @media screen and(max-width:1024px) {
+        font-size: 24px;
+      }
+
+      @media screen and(max-width:991px) {
+        font-size: 18px;
+      }
+
+      @media screen and(max-width:376px) {
+        font-size: 16px;
+      }
     }
+
+    @media screen and(max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  @media screen and(max-width: 768px) {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.footer {
+  background: #737373;
+  width: 100%;
+  height: 160px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    margin-left: 32px;
+  }
+
+  @media screen and(max-width: 768px) {
+    height: 100px;
   }
 }

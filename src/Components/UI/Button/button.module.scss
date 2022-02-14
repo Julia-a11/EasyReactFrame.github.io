@@ -8,4 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and(max-width: 1200px) {
+    width: 310px;
+  }
+
+  @media screen and(max-width: 376px) {
+    width: 250px;
+    height: 40px;
+  }
 }
