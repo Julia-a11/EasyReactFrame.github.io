@@ -112,6 +112,13 @@ $blackColor: #000000;
   height: 278px;
   width: 400px;
 
+  &__error {
+    color: red;
+    font-family: $fontRoboto;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
   label {
     font-size: 16px;
     color: $blackColor;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import NoteItem from "./NoteItem";
 import classes from './styles/app.scss'
 

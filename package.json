@@ -15,9 +15,12 @@
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
     "final-form": "^4.20.6",
+    "formik": "^2.2.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-final-form": "^6.5.8"
+    "react-final-form": "^6.5.8",
+    "react-hook-form": "^7.27.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
