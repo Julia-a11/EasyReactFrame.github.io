@@ -18,6 +18,12 @@ const FormNote = ({create}) => {
         create(newNote)
     }
 
+    const checkNumber = (e) => {
+        if (regexForNumber.includes(e.key)) {
+            e.preventDefault()
+        }
+    }
+
     return (
         <div className={classes.form}>
             <Form onSubmit={addNewNote}
@@ -31,7 +37,7 @@ const FormNote = ({create}) => {
                                           <label>Номер записи</label>
                                           {meta.error && meta.touched && <span className={classes.form__error}>{meta.error}</span>}
                                           <MyInput type="number" {...input}
-                                           onKeyDown={e => regexForNumber.includes(e.key) && e.preventDefault()}  />
+                                           onKeyDown={checkNumber}  />
                                       </>
                                   )}
                               </Field>

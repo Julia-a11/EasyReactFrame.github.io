@@ -17,7 +17,8 @@ const NoteList = ({notesList}) => {
             <div className={classes.noteList__text}>
                 <p>Список:</p>
             </div>
-            {notesList.sort((a, b) => a.numberNote > b.numberNote ? 1 : -1)
+            {notesList.sort((a, b) => a.numberNote - b.numberNote)
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
                 .map((note) =>
                     <NoteItem note={note} key={note.id}/>
                 )}
