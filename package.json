@@ -1,4 +1,5 @@
 {
+  "homepage": "https://julia-a11.github.io/EasyReactFrame.github.io/",
   "name": "irlix-internship",
   "version": "1.0.0",
   "description": "",
@@ -7,7 +8,9 @@
     "start": "npm run build && node server/index.js",
     "dev": "cross-env NODE_ENV=development webpack serve --config webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js"
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +34,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "sass": "^1.49.7",
